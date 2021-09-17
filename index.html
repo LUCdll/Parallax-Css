@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Parallax Scrolling Website | Vanilla Javascript</title>
+        <link rel="stylesheet" tipe = "text/css" href="style.css">
+    </head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+       <li><a href="#" class="active">Home</a></li>
+       <li><a href="#">About</a></li>
+       <li><a href="#">Work</a></li>
+       <li><a href="#">Contact</a></li>
+    </ul>
+    </header>
+        
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="Luaa.png" id="Lua">
+        <img src="Montains.png" id="montain_behind">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="Montain.png" id="montain">
+      
+    </section>
+
+<div class="sec" id="sec">
+    <h2>Parallax Scrollin Effects</h2>
+    <p>Parallax scrolling is a web design technique in which the website background moves at a slower pace than the foreground. This results in a 3D effect as visitors scroll down the site, adding a sense of depth and creating a more immersive browsing experience.
+
+        Parallax is based on optical illusion. Since the human eye perceives objects that are close to us as larger than things farther away, we perceive distant objects as if they were moving more slowly.
+        
+        The illusion has been long adopted into parallax across different mediums, fostering a realistic effect. Its first use was in traditional animation, dating back to as early as Disney’s Snow White and the Seven Dwarfs, and in video games such as Super Mario. 
+        
+        With advancements in CSS and HTML, parallax effects later evolved into the world of web design as we know it today.
+        
+        Here are nine outstanding parallax scrolling examples built with Wix, handpicked for your web design inspiration:</p>
+<br>   
+</div>
+
+<script>
+    let stars = document.getElementById('stars');
+    let Luaa = document.getElementById('Lua');
+    let Montains = document.getElementById('montain_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let montain = document.getElementById('montain');
+    let header = document.getElementById('header')
+
+    window.addEventListener('scroll', function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        Lua.style.top = value * 1 + "px";
+        Montains.style.top = value * 0.2 + "px";
+        montain.style.top = value * 0 + "px"; 
+        text.style.marginRight = value * 2 + "px"; 
+        text.style.marginTop = value * 0.5 + "px";
+        btn.style.marginTop = value * 0.5 + "px";  
+        header.style.top = value * 0.5 + "px";
+    })
+</script>
+
+</body>
+
+
+</html>
